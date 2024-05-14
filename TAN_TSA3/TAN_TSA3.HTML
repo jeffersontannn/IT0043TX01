@@ -1,66 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TSA3</title>
-    <style>
-        /* Add your CSS styles here */
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: center;
-        }
-        img {
-            max-width: 100px;
-            max-height: 100px;
-        }
-    </style>
 </head>
+
 <body>
     <center>
-        <form action="submit.php" method="post" enctype="multipart/form-data">
-            <label for="nd">National Dex:</label>
-            <input type="number" min="0" id="nd" name="national_dex"><br><br>
+        <form name="Pokédex:" action="Pokédex">
+            <label>
+                National Dex:
+                <input type="number" min="0" name="NationalDex" value="NationalDex"><br><br>
+            </label>
 
-            <label for="g1"><input type="radio" name="generation" id="g1"> Generation 1</label>
-            <label for="g2"><input type="radio" name="generation" id="g2"> Generation 2</label>
-            <label for="g3"><input type="radio" name="generation" id="g3"> Generation 3</label>
-            <label for="g4"><input type="radio" name="generation" id="g4"> Generation 4</label>
-            <label for="g5"><input type="radio" name="generation" id="g5"> Generation 5</label>
-            <label for="g6"><input type="radio" name="generation" id="g6"> Generation 6</label>
-            <label for="g7"><input type="radio" name="generation" id="g7"> Generation 7</label>
-            <label for="g8"><input type="radio" name="generation" id="g8"> Generation 8</label>
-            <label for="g9"><input type="radio" name="generation" id="g9"> Generation 9</label>
+            <label>
+                <input type="radio" name="Gen" value="Generation1"> Generation 1
+            </label>
+            <label>
+                <input type="radio" name="Gen" value="Generation2"> Generation 2
+            </label>
+            <label>
+                <input type="radio" name="Gen" value="Generation3"> Generation 3
+            </label>
+            <label>
+                <input type="radio" name="Gen" value="Generation4"> Generation 4
+            </label>
+            <label>
+                <input type="radio" name="Gen" value="Generation5"> Generation 5
+            </label>
+            <label>
+                <input type="radio" name="Gen" value="Generation6"> Generation 6
+            </label>
+            <label>
+                <input type="radio" name="Gen" value="Generation7"> Generation 7
+            </label>
+            <label>
+                <input type="radio" name="Gen" value="Generation8"> Generation 8
+            </label>
+            <label>
+                <input type="radio" name="Gen" value="Generation9"> Generation 9<br><br>
+            </label>
 
-            <br><br>
-            <label for="pk">Pokemon Name:</label>
-            <input type="text" id="pk" name="pokemon_name"><br><br>
+            <label>
+                Pokemon Name:
+                <input type="text" name="PokemonName"><br><br>
+            </label>
 
-            Image: <input type="file" id="image" name="image"><br><br>
+            <label>
+                Image:
+                <input type="file" name="Image:"><br><br>
+            </label>
 
-            <label for="tp">Type 1:</label>
-            <input type="text" id="tp" name="type1">&nbsp
-            <label for="tp2">Type 2:</label>
-            <input type="text" id="tp2" name="type2">
+            <label>
+                Type 1:
+                <select>
+                    <option value="Normal">Normal</option>
+                    <option value="Fire">Fire</option>
+                    <option value="Water">Water</option>
+                    <option value="Electric">Electric</option>
+                    <option value="Grass">Grass</option>
+                    <option value="Ice">Ice</option>
+                    <option value="Fightning">Fightning</option>
+                    <option value="Poison">Poison</option>
+                    <option value="Ground">Ground</option>
+                    <option value="Flying">Flying</option>
+                    <option value="Psychic">Psychic</option>
+                    <option value="Bug">Bug</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Ghost">Ghost</option>
+                    <option value="Dragon">Dragon</option>
+                    <option value="Dark">Dark</option>
+                    <option value="Steel">Steel</option>
+                    <option value="Fairy">Fairy</option>
+                </select>
+            </label>
 
-            <br><br>
-            <label for="ev_from">Evolves from:</label>
-            <input type="text" id="ev_from" name="evolves_from">&nbsp
-            <label for="ev_to">Evolves to:</label>
-            <input type="text" id="ev_to" name="evolves_to"><br><br>
+            <label>
+                Type 2:
+                <select>
+                    <option value="Normal">Normal</option>
+                    <option value="Fire">Fire</option>
+                    <option value="Water">Water</option>
+                    <option value="Electric">Electric</option>
+                    <option value="Grass">Grass</option>
+                    <option value="Ice">Ice</option>
+                    <option value="Fightning">Fightning</option>
+                    <option value="Poison">Poison</option>
+                    <option value="Ground">Ground</option>
+                    <option value="Flying">Flying</option>
+                    <option value="Psychic">Psychic</option>
+                    <option value="Bug">Bug</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Ghost">Ghost</option>
+                    <option value="Dragon">Dragon</option>
+                    <option value="Dark">Dark</option>
+                    <option value="Steel">Steel</option>
+                    <option value="Fairy">Fairy</option>
+                </select><br><br>
+            </label>
 
-            Nickname: <input type="text" id="nickname" name="nickname"><br><br>
-            Birthday: <input type="date" id="birthday" name="birthday"><br><br>
-            <input type="submit" value="Submit"><br><br>
+            <label>
+                Evolves from:
+                <input type="text" name="Evolve1">
+            </label>
 
-        </form>
+            <label>
+                Evolves to:
+                <input type="text" name="Evolve2"><br><br>
+            </label>
 
-        <table>
+            <label>
+                Nickname:
+                <input type="text" name="Nickname"><br><br>
+            </label>
+
+            <label>
+                Birthday:
+                <input type="date" name="Birthday"><br><br>
+            </label>
+
+            <button type="button">Submit</button>
+        </form><br>
+
+        <table border="1" align="center">
             <tr>
                 <th>National Dex</th>
                 <th>Generation</th>
@@ -68,88 +133,219 @@
                 <th>Image</th>
                 <th>Type 1</th>
                 <th>Type 2</th>
-                <th>Evolves from</th>
-                <th>Evolves to</th>
+                <th>Evolves From</th>
+                <th>Evolves To</th>
                 <th>Nickname</th>
                 <th>Birthday</th>
             </tr>
 
-            <tr>
-                <td>#0068</td>
-                <td>1</td>
-                <td>Machop</td>
-                <td><img src="machop_bg.jpg" alt="Machop"></td>
-                <td>Fighting</td>
-                <td>None</td>
-                <td>None</td>
-                <td>Machoke</td>
+            <tr align="center">
+                <td>0807</td>
+                <td>10</td>
+                <td>Jefferson</td>
+                <td>
+                    <img src="jeff_pic.jpg"
+                    alt="Jeff"
+                </td>
+                <td colspan="2" bgcolor="#2980EF">
+                    <font color="#2980EF">Water</font>
+                </td>
+                <td colspan="1" bgcolor="#E62829">
+                    <font color="#FFFFFF">Ghost</font>
+                </td>
+                <td>-</td>
+                <td>-</td>
                 <td>Jeff</td>
                 <td>08-07-2003</td>
             </tr>
-                <tr>
-                    <td><center>#0092</center></td>
-                    <td><center>1</center></td>
-                    <td><center>Gastly</center></td>
-                    <td><img src="gastly.jpg"></td>
-                    <td bgcolor="F08029" colspan="2"><center>Fire</center></td>
-                    <td><center>Haunter</center></td>
-                    <td><center>Gengar</center></td>
-                    <td><center>Ghoster</center></td>
-                    <td><center>08-07-2003</center></td>
-                </tr>
 
-                <tr>
-                    <td><center>#0158</center></td>
-                    <td><center>4</center></td>
-                    <td><center>Totodile</center></td>
-                    <td><img src="totodile.png"></td>
-                    <td bgcolor="F08029" colspan="2"><center>Fire</center></td>
-                    <td><center>Croconaw</center></td>
-                    <td><center>Feraligatr</center></td>
-                    <td><center>Lolong</center></td>
-                    <td><center>04-26-2003</center></td>
-                </tr>
+            <tr align="center">
+                <td>#0007</td>
+                <td>1</td>
+                <td>Squirtle</td>
+                <td>
+                    <img src="squirtle.webp"
+                    alt="Squirtle"         
+                </td>
+                <td colspan="2" bgcolor="#2980EF">
+                    <font color="#FFFFFF">Water</font>
+                </td>
+                <td>Wartortle</td>
+                <td>Blastoise</td>
+                <td>H2WO</td>
+                <td>04-26-2003</td>
+            </tr>
 
-                <tr>
-                    <td><center>#0390</center></td>
-                    <td><center>3</center></td>
-                    <td><center>Chimchar</center></td>
-                    <td><img src="chimchar.jpg" alt="Treecko"></td>
-                    <td bgcolor="F08029" colspan="2"><center>Fire</center></td>
-                    <td><center>Monferno</center></td>
-                    <td><center>Infernape</center></td>
-                    <td><center>Fiaaaa</center></td>
-                    <td><center>07-05-2006</center></td>
-                </tr>
+            <tr align="center">
+                <td>#0066</td>
+                <td>1</td>
+                <td>Machop</td>
+                <td>
+                    <img src="machop_bg.jpg"
+                    alt="Machop"
+                </td>
+                <td colspan="2" bgcolor="#FF8000">
+                    <font color="#FFF">Fighting</font>
+                </td>
+                <td>Machoke</td>
+                <td>Machamp</td>
+                <td>Champs</td>
+                <td>10-15-2004</td>
+            </tr>
 
-                <tr>
-                    <td><center>#0909</center></td>
-                    <td><center>1</center></td>
-                    <td><center>Fuecoco</center></td>
-                    <td><img src="fuecoco.jpg" alt=""></td>
-                    <td bgcolor="F08029" colspan="2"><center>Fire</center></td>
-                    <td><center>Crocalor</center></td>
-                    <td><center>Skeledirge</center></td>
-                    <td><center>Wildog</center></td>
-                    <td><center>04-14-2005</center></td>
-                </tr>
+            <tr align="center">
+                <td>#0152</td>
+                <td>2</td>
+                <td>Chikorita</td>
+                <td>
+                    <img src="chikorita.webp"
+                    alt="Chikorita"
+                </td>
+                <td colspan="2" bgcolor="#3FA129">
+                    <font color="#FFFFFF">Grass</font>
+                </td>
+                <td>Bayleef</td>
+                <td>Meganium</td>
+                <td>Cute</td>
+                <td>10-28-2000</td>
+            </tr>
 
-                <tr>
-                   <td><center>#0909</center></td>
-                    <td><center>1</center></td>
-                    <td><center>Fuecoco</center></td>
-                    <td><img src="fuecoco.jpg" alt=""></td>
-                    <td bgcolor="F08029" colspan="2"><center>Fire</center></td>
-                    <td><center>Crocalor</center></td>
-                    <td><center>Skeledirge</center></td>
-                    <td><center>Wildog</center></td>
-                    <td><center>04-14-2005</center></td>
-                </tr>
-                
-            </table>
+            <tr align="center">
+                <td>#0266</td>
+                <td>3</td>
+                <td>Silcoon</td>
+                <td>
+                    <img src="silcoon,jpg"
+                    alt="Silcoon"
+                </td>
+                <td colspan="2" bgcolor="#91A119">
+                    <font color="#FFFFFF">Steel</font>
+                </td>
+                <td>-</td>
+                <td>-</td>
+                <td>BoyBawang</td>
+                <td>07-05-2006</td>
+            </tr>
 
-        </form>
+            <tr align="center">
+                <td>#0449</td>
+                <td>4</td>
+                <td>Hippopotas</td>
+                <td>
+                    <img src="hippopotas.jpg"
+                    alt="Hippopotas"
+                </td>
+                <td colspan="2" bgcolor="#915121">
+                    <font color="#FFFFFF">Ground</font>
+                </td>
+                <td>Hippowdon</td>
+                <td>-</td>
+                <td>Dawg</td>
+                <td>08-08-2003</td>
+            </tr>
+
+            <tr align="center">
+                <td>#0001</td>
+                <td>1</td>
+                <td>Bulbasaur</td>
+                <td>
+                    <img src="bulbasaur.jpg"
+                    alt="Bulbasaur"
+                </td>
+                <td colspan="1" bgcolor="#3FA129">
+                    <font color="#FFFFFF">Grass</font>
+                </td>
+                <td colspan="1" bgcolor="#9141CB">
+                    <font color="#FFFFFF">Poison</font>
+                </td>
+                <td>Ivysaur</td>
+                <td>Venusaur</td>
+                <td>Bul</td>
+                <td>9-5-2024</td>
+            </tr>
+
+           <tr align="center">
+                <td>#0163</td>
+                <td>2</td>
+                <td>HootHoot</td>
+                <td>
+                    <img src="hoothoot.jpg"
+                    alt="HootHoot"
+                </td>
+                <td colspan="1" bgcolor="#9FA19F">
+                    <font color="#FFFFFF">Normal</font>
+                </td>
+                <td colspan="1" bgcolor="#81B9EF">
+                    <font color="#FFFFFF">Flying</font>
+                </td>
+                <td>Noctowl</td>
+                <td>-</td>
+                <td>Owl</td>
+                <td>03-14-2001</td>
+            </tr>
+
+            <tr align="center">
+                <td>#0013</td>
+                <td>1</td>
+                <td>Weedle</td>
+                <td>
+                    <img src="weedle.jpg"
+                    alt="Weedle"
+                </td>
+                <td colspan="1" bgcolor="#91A119">
+                    <font color="#FFFFFF">Bug</font>
+                </td>
+                <td colspan="1" bgcolor="#9141CB">
+                    <font color="#FFFFFF">Poison</font>
+                </td>
+                <td>Kakuna</td>
+                <td>Beedrill</td>
+                <td>Driller</td>
+                <td>12-25-2024</td>
+            </tr>
+
+            <tr align="center">
+                <td>#0519</td>
+                <td>5</td>
+                <td>Pidove</td>
+                <td>
+                    <img src="pidove.jpg"
+                    alt="Pidove"
+                </td>
+                <td colspan="1" bgcolor="#81B9EF">
+                    <font color="#FFFFFF">Normal</font>
+                </td>
+                <td colspan="1" bgcolor="#5060E1">
+                    <font color="#FFFFFF">Flying</font>
+                </td>
+                <td>Tranquill</td>
+                <td>Unfezant</td>
+                <td>Dove</td>
+                <td>11-11-2011</td>
+            </tr>
+
+
+            <tr align="center">
+                <td>#0543</td>
+                <td>5</td>
+                <td>Venipede</td>
+                <td>
+                    <img src="venipede.jpg"
+                    alt="Venipede"
+                </td>
+                <td colspan="1" bgcolor="#91A119">
+                    <font color="#FFFFFF">Bug</font>
+                </td>
+                <td colspan="1" bgcolor="#9141CB">
+                    <font color="#FFFFFF">Poison</font>
+                </td>
+                <td>Whirlipede</td>
+                <td>Scolipede</td>
+                <td>Rose</td>
+                <td>1-1-2001</td>
+            </tr>
+        </table>
     </center>
-    
 </body>
+
 </html>
