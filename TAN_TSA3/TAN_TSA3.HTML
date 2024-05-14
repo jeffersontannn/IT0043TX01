@@ -4,84 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TSA3</title>
+    <style>
+        /* Add your CSS styles here */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        img {
+            max-width: 100px;
+            max-height: 100px;
+        }
+    </style>
 </head>
 <body>
     <center>
-        <form action="">
+        <form action="submit.php" method="post" enctype="multipart/form-data">
             <label for="nd">National Dex:</label>
-            <input type="number" min="0" id="nd" name="national dex"><br><br>
+            <input type="number" min="0" id="nd" name="national_dex"><br><br>
 
-            <input type="radio" name="generation" id="g1">
-            <label for="g1">Generation 1</label>
+            <label for="g1"><input type="radio" name="generation" id="g1"> Generation 1</label>
+            <label for="g2"><input type="radio" name="generation" id="g2"> Generation 2</label>
+            <label for="g3"><input type="radio" name="generation" id="g3"> Generation 3</label>
+            <label for="g4"><input type="radio" name="generation" id="g4"> Generation 4</label>
+            <label for="g5"><input type="radio" name="generation" id="g5"> Generation 5</label>
+            <label for="g6"><input type="radio" name="generation" id="g6"> Generation 6</label>
+            <label for="g7"><input type="radio" name="generation" id="g7"> Generation 7</label>
+            <label for="g8"><input type="radio" name="generation" id="g8"> Generation 8</label>
+            <label for="g9"><input type="radio" name="generation" id="g9"> Generation 9</label>
 
-            <input type="radio" name="generation" id="g2">
-            <label for="g2">Generation 2</label>
+            <br><br>
+            <label for="pk">Pokemon Name:</label>
+            <input type="text" id="pk" name="pokemon_name"><br><br>
 
-            <input type="radio" name="generation" id="g3">
-            <label for="g3">Generation 3</label>
+            Image: <input type="file" id="image" name="image"><br><br>
 
-            <input type="radio" name="generation" id="g4">
-            <label for="g4">Generation 4</label>
-
-            <input type="radio" name="generation" id="g5">
-            <label for="g5">Generation 5</label>
-
-            <input type="radio" name="generation" id="g6">
-            <label for="g6">Generation 6</label>
-
-            <input type="radio" name="generation" id="g7">
-            <label for="g7">Generation 7</label>
-
-            <input type="radio" name="generation" id="g8">
-            <label for="g8">Generation 8</label>
-
-            <input type="radio" name="generation" id="g9">
-            <label for="g9">Generation 9</label>
-
-            <br><br><label for="pk">Pokemon Name:</label>
-            <input type="text" min="0" id="pk" name="pokemon name"><br><br>
-
-            Image: <input type="file" value="Image"><br><br>
-
-            <br><label for="tp">Type 1:</label>
-            <input type="text">&nbsp
+            <label for="tp">Type 1:</label>
+            <input type="text" id="tp" name="type1">&nbsp
             <label for="tp2">Type 2:</label>
-            <input type="text">
+            <input type="text" id="tp2" name="type2">
 
-            <br><br>Evolves from: <input type="text" name="Evolves from">
-            &nbsp Evolves to: <input type="text" name="Evolves to"><br><br>
+            <br><br>
+            <label for="ev_from">Evolves from:</label>
+            <input type="text" id="ev_from" name="evolves_from">&nbsp
+            <label for="ev_to">Evolves to:</label>
+            <input type="text" id="ev_to" name="evolves_to"><br><br>
 
-            Nickname: <input type="text" name="Nickname"><br><br>
-            Birthday: <input type="date" name="Birthday"><br><br>
+            Nickname: <input type="text" id="nickname" name="nickname"><br><br>
+            Birthday: <input type="date" id="birthday" name="birthday"><br><br>
             <input type="submit" value="Submit"><br><br>
 
-            <table border="">
-                <tr>
-                    <th><center>National Dex</center></th>
-                    <th><center>Generation</center></th>
-                    <th><center>Pokemon Name</center></th>
-                    <th><center>Image</center></th>
-                    <th><center>Type 1</center></th>
-                    <th><center>Type 2</center></th>
-                    <th><center>Evolves from</center></th>
-                    <th><center>Evolves to</center></th>
-                    <th><center>Nickname</center></th>
-                    <th><center>Birthday</center></th>
-                </tr>
+        </form>
 
-                <tr>
-                    <td><center>#0068</center></td>
-                    <td><center>Machop</center></td>
-                    <td><center>Machoke</center></td>
-                    <td><img src="machop.jpg" alt=""></td>
-                    <td bgcolor="4150" colspan="2"><center>Type Shi</center></td>
-                    <td><center>Machamp</center></td>
-                    <td><center>Jeff</center></td>
-                    <td><center>Sinon Loresca </center></td>Z
-                    <td><center>08-07-2003</center></td>
-                        
-                </tr>
+        <table>
+            <tr>
+                <th>National Dex</th>
+                <th>Generation</th>
+                <th>Pokemon Name</th>
+                <th>Image</th>
+                <th>Type 1</th>
+                <th>Type 2</th>
+                <th>Evolves from</th>
+                <th>Evolves to</th>
+                <th>Nickname</th>
+                <th>Birthday</th>
+            </tr>
 
+            <tr>
+                <td>#0068</td>
+                <td>1</td>
+                <td>Machop</td>
+                <td><img src="machop.jpg" alt="Machop"></td>
+                <td>Fighting</td>
+                <td>None</td>
+                <td>None</td>
+                <td>Machoke</td>
+                <td>Jeff</td>
+                <td>08-07-2003</td>
+            </tr>
                 <tr>
                     <td><center>#0092</center></td>
                     <td><center>1</center></td>
